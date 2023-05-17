@@ -10,7 +10,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.jetpackcompose.disposableeffect.screen.DisposableEffectScreen
 import com.jetpackcompose.disposableeffect.ui.theme.JetpackComposeDisposableEffectTheme
+import com.jetpackcompose.disposableeffect.viewModel.DisposableEffectViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +24,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    DisposableEffectScreen(viewModel = DisposableEffectViewModel())
+//                    DisposableEffectTestScreen(DisposableEffectTestViewModel())
                 }
             }
         }
